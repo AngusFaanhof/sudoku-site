@@ -1,4 +1,13 @@
-var grid = Array(81).fill(0);
+var sudoku = new Sudoku();
+
+function sudokuGridToTable(grid) {
+    for (i = 0; i < grid.length; i++) {
+        row = Math.floor(i / 9);
+        column = i % 9;
+
+        document.querySelector(`#r${row} #c${column}`).innerText = grid[i];
+    }
+}
 
 const gridTableTds = document.querySelectorAll("#grid td");
 activeGridElement = null;
@@ -19,7 +28,7 @@ function tryTofillCellAndGrid() {
         option = parseInt(activeOptionElement.id[1]);
 
         activeGridElement.innerText = option;
-        grid[row * 9 + cell] = option;
+        sudoku.setGridValue(row, cell, option);
     }
 }
 
