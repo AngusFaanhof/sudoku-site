@@ -1,0 +1,42 @@
+table {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+.selected {
+    background-color: yellow;
+}
+
+#grid td {
+    height:30px;
+    width:30px;
+    border:1px solid;
+    text-align:center;
+}
+
+#grid td:first-child {
+    border-left:solid;
+}
+
+#grid td:nth-child(3n) {
+    border-right:solid;
+}
+
+#grid tr:first-child {
+    border-top: solid;
+}
+
+#grid tr:nth-child(3n) td {
+    border-bottom:solid;
+}
+
+#options {
+    border: solid;
+}
+
+#options td {
+    height:20px;
+    width:20px;
+    border:1px solid;
+    text-align:center;
+}
